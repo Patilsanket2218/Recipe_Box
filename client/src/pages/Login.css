@@ -1,0 +1,107 @@
+/* General styles */
+/* body, html {
+  overflow: hidden;
+  height: 100%;
+} */
+
+.login-background {
+  background-image: url("../images/signup-login.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Animation for login container */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animation for form fields */
+@keyframes fadeInInput {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Login container with animation */
+.login-container {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 2rem;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Login form with input animations */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.login-form input {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  animation: fadeInInput 0.5s ease-out forwards;
+}
+
+.login-form button {
+  padding: 0.75rem;
+  background-color: #eb4917;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  animation: fadeInInput 0.5s ease-out 0.1s forwards; /* Delayed animation */
+}
+
+.login-form button:hover {
+  background-color: #e46f4c;
+}
+
+.login-container p {
+  text-align: center;
+}
+
+.login-container a {
+  text-decoration: none;
+  color: #eb4917;
+}
+
+.login-container a:hover {
+  text-decoration: underline;
+}
+
+/* Optional: Add a fade-in for the background image (slower transition) */
+.login-background {
+  animation: fadeInBackground 1s ease-out;
+}
+
+@keyframes fadeInBackground {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

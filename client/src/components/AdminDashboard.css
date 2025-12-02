@@ -1,0 +1,141 @@
+.admin-dashboard {
+  display: flex;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+.sidebar {
+  width: 220px;
+  background-color: #2c3e50;
+  color: white;
+  padding: 20px;
+}
+
+.sidebar h2 {
+  margin-bottom: 20px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  padding: 12px 0;
+  cursor: pointer;
+  border-bottom: 1px solid #34495e;
+}
+
+.sidebar li:hover {
+  background-color: #34495e;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+}
+
+.register-report h2 {
+  margin-bottom: 20px;
+}
+
+.report-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.report-table th,
+.report-table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+.report-table th {
+  background-color: #f5f5f5;
+}
+
+.register-graph{
+    text-align: center;
+    padding-top: 50px;
+}
+
+.recipe-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 500px;
+  margin: 20px auto; /* center the form horizontally */
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.recipe-form input,
+.recipe-form textarea,
+.recipe-form select {
+  padding: 12px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.recipe-form button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.recipe-form button:hover {
+  background-color: #45a049;
+}
+
+/* Recipe table styling */
+.recipe-manager {
+  padding: 20px;
+}
+
+.recipe-manager table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.recipe-manager th,
+.recipe-manager td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.recipe-manager th {
+  background-color: #f2f2f2;
+}
+
+.recipe-manager td button {
+  margin-right: 10px;
+  padding: 6px 10px;
+  font-size: 0.9em;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #2196F3;
+  color: white;
+}
+
+.recipe-manager td button:hover {
+  background-color: #1976D2;
+}
+
+.recipe-manager td button:last-child {
+  background-color: #f44336;
+}
+
+.recipe-manager td button:last-child:hover {
+  background-color: #d32f2f;
+}

@@ -1,0 +1,89 @@
+h1{
+    padding-top: 50px;
+}
+
+.recipe-gallery {
+  padding: 40px 20px;
+  max-width: 1520px;
+  margin: 0 auto;
+  background-color: #f9f9f9;
+}
+
+.category-section {
+  margin-bottom: 60px;
+}
+
+.category-section h2 {
+  margin-bottom: 25px;
+  color: #333;
+  border-bottom: 3px solid #4CAF50;
+  display: inline-block;
+  padding-bottom: 6px;
+  font-size: 1.8rem;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.recipe-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  width: calc(33.333% - 16px);
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s;
+}
+
+.recipe-card:hover {
+  transform: translateY(-5px);
+}
+
+.recipe-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+
+.recipe-card h3 {
+  margin: 0 0 10px;
+  font-size: 1.2rem;
+  color: #222;
+}
+
+.recipe-card p {
+  font-size: 0.95rem;
+  color: #555;
+  margin: 4px 0;
+  line-height: 1.4;
+}
+
+.image-placeholder {
+  width: 100%;
+  height: 150px;
+  background-color: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #777;
+  font-style: italic;
+  border-radius: 8px;
+}
+
+.wishlist-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: red;
+  transition: transform 0.2s;
+}
+
+.wishlist-btn:hover {
+  transform: scale(1.2);
+}

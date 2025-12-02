@@ -1,0 +1,108 @@
+/* General styles */
+/* body, html {
+  overflow: hidden;
+  height: 100%;
+} */
+
+.signup-background {
+  background-image: url("../images/signup-login.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Animation for signup container */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animation for form fields */
+@keyframes fadeInInput {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Animation for the background fade-in */
+@keyframes fadeInBackground {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Signup container with animation */
+.signup-container {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 2rem;
+  background-color: #f8f8f8;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Signup form with input animations */
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.signup-form input {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  animation: fadeInInput 0.5s ease-out forwards;
+}
+
+.signup-form button {
+  padding: 0.75rem;
+  background-color: #eb4917;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  animation: fadeInInput 0.5s ease-out 0.1s forwards; /* Delayed animation */
+}
+
+.signup-form button:hover {
+  background-color: #e46f4c;
+}
+
+.signup-container p {
+  text-align: center;
+}
+
+.signup-container a {
+  text-decoration: none;
+  color: #eb4917;
+}
+
+.signup-container a:hover {
+  text-decoration: underline;
+}
+
+/* Optional: Add a fade-in for the background image (slower transition) */
+.signup-background {
+  animation: fadeInBackground 1s ease-out;
+}

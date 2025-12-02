@@ -1,0 +1,193 @@
+/* Carousel styles */
+.carousel-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transform: scale(1.05);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slide.active {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 2;
+}
+
+.slide-text {
+  color: white;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 0 20px;
+  z-index: 2;
+}
+
+/* === New Feature Section === */
+.feature-section {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  padding: 60px 20px;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.feature-section.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.feature-text {
+  flex: 1 1 400px;
+  max-width: 500px;
+}
+
+.feature-subtitle {
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  color: #838383;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.feature-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.feature-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #838383;
+}
+
+.feature-link {
+  color: #f5d27a;
+  font-weight: bold;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s;
+}
+
+.feature-link:hover {
+  border-color: #f5d27a;
+}
+
+.feature-images {
+  flex: 1 1 500px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 160px;
+  gap: 20px;
+}
+
+.feature-image {
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+}
+
+.feature-image.tall {
+  grid-row: span 2;
+}
+
+.feature-image.small {
+  grid-row: span 1;
+}
+
+/* Meal Picks Section */
+.meal-section {
+  padding: 60px 20px;
+  background-color: #efefef;
+}
+
+.meal-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.meal-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+@media (min-width: 768px) {
+  .meal-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.meal-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.meal-card:hover {
+  transform: translateY(-5px);
+}
+
+.meal-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.meal-content {
+  padding: 16px;
+}
+
+.meal-tag {
+  display: inline-block;
+  background-color: #e4f3e9;
+  color: #2f855a;
+  font-size: 0.75rem;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.meal-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.meal-meta {
+  font-size: 0.875rem;
+  color: #777;
+  margin-bottom: 8px;
+}
+
+.meal-rating {
+  color: #f6ad55;
+  font-size: 1rem;
+}

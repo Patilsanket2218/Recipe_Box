@@ -1,0 +1,90 @@
+.navbar {
+  position: fixed; /* Fixes the navbar at the top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem 2rem;
+  background-color: #0000006b;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000; /* Ensures it stays on top of other elements */
+}
+
+.navbar-logo {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  flex: 1;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex: 2;
+}
+
+.navbar-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.navbar-links li a:hover {
+  text-decoration: underline;
+}
+
+.navbar-login {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.login-btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 6px 14px;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.login-btn:hover {
+  background-color: #45a049;
+}
+
+/* Add this to Navbar.css */
+.profile-btn {
+  background-color: transparent;
+  color: white;
+  border: none;
+  margin-right: 10px;
+  font-weight: bold;
+  cursor: default;
+}
+
+.wishlist-btn {
+  font-size: 20px;
+  margin-right: 10px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: white;
+  text-decoration: none;
+}
+.wishlist-btn:hover {
+  color: #ff4d4f;
+}
+
+.wishlist-count {
+  background-color: red;
+  color: white;
+  padding: 2px 6px;
+  border-radius: 50%;
+  font-size: 12px;
+  margin-left: 4px;
+}
