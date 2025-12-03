@@ -24,7 +24,7 @@ app.use("/api/recipes", recipeRoutes); // ✅ NEW
 app.use("/api/wishlist", wishlistRoutes);
 
 // MongoDB connection
-mongoose.connect("mongodb://127.0.0.1:27017/recipe_box")
+mongoose.connect("mongodb+srv://sp5768528_db_user:T53ff3wJ7vlX62pN@recipebox.hohwhub.mongodb.net/?appName=RecipeBox")
   .then(() => console.log("✅ MongoDB connected"))
   .catch((err) => console.error("❌ DB connection error:", err));
 
