@@ -11,7 +11,16 @@ const wishlistRoutes = require("./routes/wishlistRoutes");
 const app = express();
 
 // Middleware
-app.use(cors({ origin: "http://localhost:5173", credentials: true }));
+app.use(cors({
+  origin: [
+    "http://localhost:5173",
+    "https://recipe-box-rust.vercel.app",
+    "https://recipebox-og5e.onrender.com" // optional
+  ],
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true
+}));
+
 app.use(express.json());
 
 // Static file serving (for images if used)
