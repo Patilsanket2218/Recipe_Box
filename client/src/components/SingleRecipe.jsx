@@ -9,7 +9,7 @@ function SingleRecipe() {
   const [recipe, setRecipe] = useState(null);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/api/recipes/${id}`)
+    fetch(`https://recipebox-og5e.onrender.com/api/recipes/${id}`)
       .then((res) => res.json())
       .then((data) => setRecipe(data))
       .catch((err) => console.error("Error fetching recipe:", err));

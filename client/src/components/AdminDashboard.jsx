@@ -28,7 +28,7 @@ function AdminDashboard() {
 
   useEffect(() => {
     if (activePage === "registers") {
-      fetch("http://localhost:5000/api/auth/all-users")
+      fetch("https://recipebox-og5e.onrender.com/api/auth/all-users")
         .then((res) => res.json())
         .then((data) => {
           setUsers(data);
@@ -51,7 +51,7 @@ function AdminDashboard() {
 
   const fetchRecipes = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/recipes");
+      const res = await axios.get("https://recipebox-og5e.onrender.com/api/recipes");
       setRecipes(res.data);
     } catch (error) {
       console.error("Failed to fetch recipes:", error);
@@ -62,9 +62,9 @@ function AdminDashboard() {
     e.preventDefault();
     try {
       if (editingId) {
-        await axios.put(`http://localhost:5000/api/recipes/${editingId}`, formData);
+        await axios.put(`https://recipebox-og5e.onrender.com/api/recipes/${editingId}`, formData);
       } else {
-        await axios.post("http://localhost:5000/api/recipes", formData);
+        await axios.post("https://recipebox-og5e.onrender.com/api/recipes", formData);
       }
       setFormData({
         title: "",
@@ -94,7 +94,7 @@ function AdminDashboard() {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/recipes/${id}`);
+      await axios.delete(`https://recipebox-og5e.onrender.com/api/recipes/${id}`);
       fetchRecipes();
     } catch (err) {
       console.error("Failed to delete recipe:", err);

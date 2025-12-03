@@ -21,7 +21,7 @@ function Navbar() {
 
   useEffect(() => {
     if (userEmail) {
-      fetch(`http://localhost:5000/api/wishlist/count/${userEmail}`)
+      fetch(`https://recipebox-og5e.onrender.com/api/wishlist/count/${userEmail}`)
         .then((res) => res.json())
         .then((data) => setWishlistCount(data.count || 0))
         .catch((err) => console.error("Error fetching wishlist count:", err));

@@ -7,7 +7,7 @@ function WishlistPage() {
 
   useEffect(() => {
     if (userEmail) {
-      fetch(`http://localhost:5000/api/wishlist/${userEmail}`)
+      fetch(`https://recipebox-og5e.onrender.com/api/wishlist/${userEmail}`)
         .then((res) => res.json())
         .then((data) => setWishlist(data))
         .catch((err) => console.error("Error fetching wishlist:", err));

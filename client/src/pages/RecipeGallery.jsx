@@ -8,7 +8,7 @@ function RecipeGallery() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/recipes")
+    fetch("https://recipebox-og5e.onrender.com/api/recipes")
       .then((res) => res.json())
       .then((data) => setRecipes(data))
       .catch((err) => console.error("Error fetching recipes:", err));
@@ -34,7 +34,7 @@ function RecipeGallery() {
     }
 
     try {
-      const res = await fetch("http://localhost:5000/api/wishlist/add", {
+      const res = await fetch("https://recipebox-og5e.onrender.com/api/wishlist/add", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ userEmail, recipeId: recipe._id }),

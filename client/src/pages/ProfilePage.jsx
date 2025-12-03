@@ -19,13 +19,13 @@ function ProfilePage() {
 
   const fetchProfile = async (email) => {
     try {
-      const res = await fetch(`http://localhost:5000/api/profile/${email}`);
+      const res = await fetch(`https://recipebox-og5e.onrender.com/api/profile/${email}`);
       if (res.ok) {
         const data = await res.json();
         setName(data.name || "");
         setBio(data.bio || "");
         if (data.profileImage) {
-          setImagePreview(`http://localhost:5000/uploads/${data.profileImage}`);
+          setImagePreview(`https://recipebox-og5e.onrender.com/uploads/${data.profileImage}`);
         }
       }
     } catch (err) {
@@ -53,7 +53,7 @@ function ProfilePage() {
     }
 
     try {
-      const res = await fetch("http://localhost:5000/api/profile/save", {
+      const res = await fetch("https://recipebox-og5e.onrender.com/api/profile/save", {
         method: "POST",
         body: formData,
       });
